@@ -1,0 +1,3 @@
+[submodule "Zeal-8-bit-OS"]
+	path = Zeal-8-bit-OS
+	url = https://github.com/Zeal8bit/Zeal-8-bit-OS
