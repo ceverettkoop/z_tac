@@ -14,7 +14,11 @@ endif
 ZOS_INCLUDE = $(ZOS_PATH)/kernel_headers/z88dk-z80asm/
 
 # Assembler binary name
-ASM = z88dk-z80asm
+ifdef SNAP
+	ASM = z88dk.z88dk-z80asm
+else
+	ASM = z88dk-z80asm
+endif
 # Assembler flags
 ASMFLAGS = -b -I$(ZOS_INCLUDE) -O$(OUTPUT_DIR)
 
@@ -30,4 +34,4 @@ $(OUTPUT_DIR):
 	mkdir -p $@
 
 clean:
-	rm -r bin/
+	rm -r bin/*.bin
